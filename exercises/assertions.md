@@ -13,3 +13,5 @@ Answer the following questions:
 ## Answer
 
 2 - assertEquals uses equals() method (that should be overrided) to compare objects, while assertSame uses == operator to compare them.
+If we didn't override equals(), it will compare references, so assertEquals behaves the same as assertSame.
+If we did override equals(), assertSame compares references and assertEquals compares based on how we implement it.
