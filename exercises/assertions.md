@@ -16,7 +16,8 @@ Answer the following questions:
  - If we didn't override equals(), it will compare references, so assertEquals behaves the same as assertSame.
  - If we did override equals(), assertSame compares references and assertEquals compares based on how we implement it.
 
-3 -  - The junit fail method is used to verify that the actual exception will throw an error or the test is failing at the time of development.
+3 -  Other uses :
+- The junit fail method is used to verify that the actual exception will throw an error or the test is failing at the time of development.
 
 4 - assertThrows (Class<T> expectedType, Executable executable)
  
