@@ -36,8 +36,7 @@ We use the JUnitUseExpected ruleset to analyze the common-cli project. This rule
  ```
 Here the code needs to specify a //expected test. An example of what can be done to improve it.
     
-    ```@Test(expected=IllegalArgumentException.class)
+```@Test(expected=IllegalArgumentException.class)
     public void testGood() {
       //do some test for
-      }
-```
+      }```
