@@ -32,11 +32,13 @@ We use the JUnitUseExpected ruleset to analyze the common-cli project. This rule
         } catch (final IllegalArgumentException e) {
             // expected
         }
-    }```
+    }
+    ```
     
-    Here the code needs to specify a //expected test
+    Here the code needs to specify a //expected test. An example of what can be done to improve it.
     
     ```@Test(expected=IllegalArgumentException.class)
     public void testGood() {
       //do some test for
       }
+      ```
