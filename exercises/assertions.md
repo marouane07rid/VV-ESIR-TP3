@@ -18,6 +18,18 @@ Answer the following questions:
 
 3 -  Other uses :
 - The junit fail method is used to verify that the actual exception will throw an error or the test is failing at the time of development.
+- At the time of writing unit test cases, we use the junit fail method for creating failure in testing conditions.
+
+```public class JunitFail {
+   private void junitfail () {
+         try {
+            java.lang.reflect.Field fie = SpelExpression.class.getField ("Junit Fail");
+         }
+        catch (Exception ex) {
+          fail (ex.toString ());
+        }
+     }
+```
 
 4 - assertThrows (Class<T> expectedType, Executable executable)
  
