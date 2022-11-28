@@ -20,6 +20,6 @@ Answer the following questions:
  
  Assert that execution of the supplied executable throws an exception of the expectedType and return the exception.
  
-If we pass Exception as the expected exception type, any exception thrown will make the assertion succeed since Exception is the super-type for all exceptions
+If we pass Exception as the expected exception type, any exception thrown will make the assertion succeed since Exception is the super-type for all exceptions.
  
 The assertThrows() method enables more fine-grained control for exception assertion logic because we can use it around specific parts of the code.
