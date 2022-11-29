@@ -11,6 +11,7 @@ Answer the following questions:
 4. In JUnit 4, an exception was expected using the `@Test` annotation, while in JUnit 5 there is a special assertion method `assertThrows`. In your opinion, what are the advantages of this new way of checking expected exceptions?
 
 ## Answer
+1 - `assertTrue(3 * .4 == 1.2)` fails because the result of 3*.4 is superior than 1.2. In order to make this assertion success we need to write it as the following `assertTrue(3 * .4 >= 1.2)`
 
 2 - assertEquals uses equals() method (that should be overrided) to compare objects, while assertSame uses == operator to compare them.
  - If we didn't override equals(), it will compare references, so assertEquals behaves the same as assertSame.
