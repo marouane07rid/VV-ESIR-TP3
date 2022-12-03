@@ -9,7 +9,7 @@ class Date implements Comparable<Date> {
     int day;
     int month;
     int year;
-    static Map<Integer, Integer> joursMois;
+    static Map<Integer, Integer> joursMois = initializeJoursMois();
 
     public Date(int day, int month, int year) throws IllegalArgumentException {
 
@@ -17,21 +17,26 @@ class Date implements Comparable<Date> {
             this.day = day;
             this.month = month;
             this.year = year;
-            joursMois = new TreeMap<Integer, Integer>();
-            joursMois.put(1, 31);
-            joursMois.put(2, 28);
-            joursMois.put(3, 31);
-            joursMois.put(4, 30);
-            joursMois.put(5, 31);
-            joursMois.put(6, 30);
-            joursMois.put(7, 31);
-            joursMois.put(8, 31);
-            joursMois.put(9, 30);
-            joursMois.put(10, 31);
-            joursMois.put(11, 30);
-            joursMois.put(12, 31);
+            initializeJoursMois();
         } else
             throw new IllegalArgumentException();
+    }
+
+    public static Map<Integer, Integer> initializeJoursMois() {
+        joursMois = new TreeMap<Integer, Integer>();
+        joursMois.put(1, 31);
+        joursMois.put(2, 28);
+        joursMois.put(3, 31);
+        joursMois.put(4, 30);
+        joursMois.put(5, 31);
+        joursMois.put(6, 30);
+        joursMois.put(7, 31);
+        joursMois.put(8, 31);
+        joursMois.put(9, 30);
+        joursMois.put(10, 31);
+        joursMois.put(11, 30);
+        joursMois.put(12, 31);
+        return joursMois;
     }
 
     public static boolean isValidDate(int day, int month, int year) {
