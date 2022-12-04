@@ -53,3 +53,28 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1. We select a test set for each method. The inputs that need to be tested for every method are at the boundaries of days and months(e.g. 1/1/2000, 31/12/2000, ...) and also at the boundaries of february march (leap year). Each boundary must be tested separately. There are 4 parameters used in this class : day, month, year, and Date. Date includes all the other fields. It means that almost every mothod (except isLeapYear()) uses day, month and year value.
+
+|                   | classic date  | outOfBounds | negative date |
+| :---------------  |:-------------:| :----------:| :-----------: |
+| not leap year     |   15/5/2000   | 29/2/2000   | -5/1/2000     |
+| leap year         |   15/5/2000   | 30/2/2000   | -5/1/2000     |
+
+2. When we checked the if statement, we decided to add some tests at boundaries. Especially for nextDate() and previousDate(). We added this.
+
+|                   |   first day   |   last day  | first of year |
+| :---------------  |:-------------:| :----------:| :-----------: |
+| not leap year     |    1/6/801    |   28/2/801  |   1/1/801     |
+| leap year         |    1/3/800    |   29/2/800  |   1/1/800     |
+
+3. For example with isLeapYear(), we need to test every possible case:
+- year is modulo 400
+- year is modulo4 and modulo 100
+- year is modulo 4 but not 100
+- year is not modulo 4 but modulo 100 (impossible according to math)
+- year is not modulo 4 and not modulo 100
+
+```
+(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0));
+```
+
