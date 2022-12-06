@@ -68,6 +68,7 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 | leap year         |    1/3/800    |   29/2/800  |   1/1/800     |
 
 3. For example with isLeapYear(), we need to test every possible case:
+
 - year is modulo 400
 - year is modulo4 and modulo 100
 - year is modulo 4 but not 100
