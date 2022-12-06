@@ -79,3 +79,6 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0));
 ```
 
+4. Here is the pitest review of Date class
+
+![image](/ressources/pitest.png)
