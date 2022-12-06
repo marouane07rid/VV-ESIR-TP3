@@ -22,6 +22,8 @@ class Date implements Comparable<Date> {
             throw new IllegalArgumentException();
     }
 
+
+
     public static Map<Integer, Integer> initializeJoursMois() {
         joursMois = new TreeMap<Integer, Integer>();
         joursMois.put(1, 31);
@@ -71,6 +73,8 @@ class Date implements Comparable<Date> {
             return new Date(joursMois.get(12), 12, year - 1);
         }
     }
+
+    
 
     public int compareTo(Date other) {
         if (other != null) {

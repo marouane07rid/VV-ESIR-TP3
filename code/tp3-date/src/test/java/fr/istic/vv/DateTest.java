@@ -72,7 +72,4 @@ class DateTest {
         int[] date = testSet_isValidDate[7];
         assertTrue(Date.isValidDate(date[0],date[1],date[2]));
     }
-
-
-    
 }
