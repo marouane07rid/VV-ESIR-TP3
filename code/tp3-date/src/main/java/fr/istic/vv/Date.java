@@ -55,9 +55,9 @@ class Date implements Comparable<Date> {
     }
 
     public Date nextDate() {
-        if (!isValidDate(day + 1, month, year)) {
+        if (isValidDate(day + 1, month, year)) {
             return new Date(day + 1, month, year);
-        } else if (!isValidDate(1, month + 1, year)) {
+        } else if (isValidDate(1, month + 1, year)) {
             return new Date(1, month + 1, year);
         } else {
             return new Date(1, 1, year + 1);
@@ -65,10 +65,11 @@ class Date implements Comparable<Date> {
     }
 
     public Date previousDate() {
-        if (!isValidDate(day - 1, month, year)) {
+        if (isValidDate(day - 1, month, year)) {
             return new Date(day - 1, month, year);
-        } else if (!isValidDate(joursMois.get(month - 1), month - 1, year)) {
-            return new Date(joursMois.get(month - 1), month - 1, year);
+        } else if (month-1>0 && isValidDate(joursMois.get(month - 1), month - 1, year)) {
+            if (month-1==2 && isLeapYear(year)) return new Date(29, month - 1, year);
+            else return new Date(joursMois.get(month - 1), month - 1, year);
         } else {
             return new Date(joursMois.get(12), 12, year - 1);
         }
@@ -94,5 +95,10 @@ class Date implements Comparable<Date> {
                 return 0;
         } else
             throw new NullPointerException();
+    }
+
+    @Override
+    public String toString() {
+        return ""+day+"/"+month+"/"+year;
     }
 }
