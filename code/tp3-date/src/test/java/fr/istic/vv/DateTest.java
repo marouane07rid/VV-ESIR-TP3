@@ -209,4 +209,52 @@ class DateTest {
         assertEquals(date.month, 2);
         assertEquals(date.year, 801);
     }
+
+
+    /////////////////////////////////////
+    ////// Test pcompareTo() method /////
+    /////////////////////////////////////
+    private Date date = new Date(15,10,2000);
+
+    @Test
+    void testCompareTo_sameDate() {
+        Date compareDate = new Date(15,10,2000);
+        assertEquals(date.compareTo(compareDate), 0);
+    }
+
+    @Test
+    void testCompareTo_earlierDate() {
+        Date compareDate = new Date(14,10,2000);
+        assertEquals(date.compareTo(compareDate), 1);
+    }
+
+    @Test
+    void testCompareTo_laterDate() {
+        Date compareDate = new Date(16,10,2000);
+        assertEquals(date.compareTo(compareDate), -1);
+    }
+
+    @Test
+    void testCompareTo_earlierMonth() {
+        Date compareDate = new Date(15,9,2000);
+        assertEquals(date.compareTo(compareDate), 1);
+    }
+
+    @Test
+    void testCompareTo_laterMonth() {
+        Date compareDate = new Date(15,11,2000);
+        assertEquals(date.compareTo(compareDate), -1);
+    }
+
+    @Test
+    void testCompareTo_earlierYear() {
+        Date compareDate = new Date(15,10,1999);
+        assertEquals(date.compareTo(compareDate), 1);
+    }
+
+    @Test
+    void testCompareTo_laterYear() {
+        Date compareDate = new Date(15,10,2001);
+        assertEquals(date.compareTo(compareDate), -1);
+    }
 }

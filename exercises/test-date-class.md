@@ -81,4 +81,8 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 4. Here is the pitest review of Date class
 
-![image](/ressources/pitest.png)
+![image](/ressources/pitest_date.png)
+
+After some improvements and after adding some test, we have a better coverage.
+
+![image](/ressources/pitest_date_improved.png)
