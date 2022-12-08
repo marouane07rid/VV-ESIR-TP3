@@ -40,3 +40,10 @@ Use the following steps to design the test suite:
 Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 ## Answer
+
+1. Here is the result of the Input Space Partitioning. The characteristics that are common to more than one method are the following: the comparator is not null, the heap is not empty, the element is not null. The blocks are the following: the heap is empty, the heap is not empty, the element is null, the element is not null.
+ 
+
+Here is the result of the Pitest report
+
+![image](/ressources/pitest_heap.png)
